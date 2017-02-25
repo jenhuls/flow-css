@@ -1,10 +1,10 @@
 # CSS Styleguide
 
-> A proposal for structuring CSS in larger web projects
+> A proposal for structuring CSS in web projects.
 
 There are bunch of various CSS guidelines, methodologies and blueprints are available on the internet. I did research (briefly) on numbers of leading projects before come down to draft this document.
 
-Here's a list of a few of main existing guidelines that I looked into:
+Here’s a list of a few of main existing guidelines which I looked into:
 
 * Object-Oriented CSS (OOCSS)
 * BEM - Block, Element, Modifier
@@ -13,51 +13,59 @@ Here's a list of a few of main existing guidelines that I looked into:
 * SUIT CSS
 * Systematic CSS
 
-Before move into the proposing solution, let's summarize the few of existing guidelines here;
+Before move into the proposing solution, let’s summarize the few of existing guidelines here;
 
 ### Object-Oriented CSS (OOCSS)
 
-OOCSS is based Object-oriented thinking pattern as implicates by its' name.
+OOCSS is based Object-oriented thinking pattern as implicates by its’ name.
 
 A best example for uses of OOCSS is [Bootstrap](http://getbootstrap.com/). All the bootstrap style classes has organized in OOCSS manner.
 
 Ex-
 ```
-.btn
-.btn-default
-.btn-primary
-.btn-success
+.btn {}
+.btn-default {}
+.btn-primary {}
+.btn-success {}
 ```
 
 ### BEM - Block, Element, Modifier
 
 BEM is entirely focused on __naming convention__ of CSS classes. It has divided into three type of CSS classes based on the behaviour.
 
-* **Block**  .block
-* **Element**   .block__element
-* **Modifier**  .block__element--modifier
+* **Block**: .block
+* **Element**: .block__element
+* **Modifier**: .block__element--modifier
 
 Ex-
 ```
-.notifications // block
-.notifications__error or notifications__warnning // element
-.notifications--show or .notifications--hide // modifier
+./* block */
+.container {}
+.alerts {}
+
+/* element */
+.alerts__error {}
+.notifications__warnning {}
+
+/* modifier */
+.alerts--show {}
+.alerts--hide {}
 ```
 
 ### SMACSS - Scalable and Modular Architecture for CSS
 
 SMACSS is also based on categorization of CSS rules. Unlike BEM; SMACSS classified CSS rules into five categories:
 
-* **Base**  Primary html DOM elements, such as `body`, `h1`, `p` `a` ..etc.
-* **Layout**  This may be like `.page-layout`, `.contact-form`, `.alert` ..etc.
-* **Modules**  Modules are reusable components. `.btn`, `.input-field`
-* **State**  The state of the DOM element. `.show`, `.notified` ..etc.
+* **Base**: Primary html DOM elements, such as `body`, `h1`, `p` `a` ..etc.
+* **Layout**: This may be like `.page-layout`, `.contact-form`, `.alert` ..etc.
+* **Modules**: Modules are reusable components. `.btn`, `.input-field`
+* **State**: The state of the DOM element. `.show`, `.notified` ..etc.
 
 ## Conclusion
 
 The conclusion is; all the above guidelines have both pros and cons and those things are always depends on the use-case and the complexity of the application.
 
-Secondly, in a real-world project, if someone or an organization wants to implements a styleguide such as for web development projects; it can't be based on a single methodology (above mentioned or any other). In that case, we may need to make an additional set of rules for a better implementation.
+Secondly, in a real-world project, if someone or an organization wants to implements a styleguide such as for web development projects; it can’t be based on a single methodology (above mentioned or any other). In that case, we may need to make an additional set of rules for a better implementation.
 
 ---
 
@@ -97,11 +105,11 @@ css/
   final.css
 ```
 
-Here, we keep all the third-party css libraries (if any) in `vendor/` directory, and `SASS` files in `sass/` directory as divided into separate modules. Finally, the transpiled-minified version of all, keeps as in `final.css`.
+Here, we keep all the third-party CSS libraries (if any) in `vendor/` directory, and `SASS` files in `sass/` directory as divided into separate modules. Finally, the transpiled-minified version of all, keeps as in `final.css`.
 
 #### Code styles
 
-##### Put stylesheet information in top of the each css file
+##### Put stylesheet information in top of the each CSS file
 
 > Follow the YAML standards
 
@@ -114,7 +122,7 @@ Ex-
   date-modified: March 01, 2017
   authors:
     - _thinkholic
-    - Indika
+    - Ind
   includes:
     - Header
     - Primary Menu
@@ -134,7 +142,7 @@ Ex-
 
 Use two space indents and maintain it properly in the entire codebase.
 
-#### Write multi-line CSS unless it's just only a single line of code
+#### Write multi-line CSS unless it’s just only a single line of code
 
 Ex-
 ```
@@ -152,7 +160,7 @@ Ex-
 
 The one of the best practices of CSS in a larger codebase is avoid uses of `!imporatnt` as possible.
 
-##### Test/temporarily styles
+##### Adding test/temporary styles
 
 Put an additional tab indent for a test/temporarily added styles.
 
@@ -163,11 +171,11 @@ Ex-
   padding: 5px 10px;
   font-size: 10px;
   display: block;
-    background-color: #eee; // temporarily put here
+    background-color: #eee; /* temporarily put here */
 }
 ```
 
-##### Disabling style ruled 
+##### Disabling style rules
 
 Add `x-` prefix for disable style rule without removing entirely. 
 
@@ -177,16 +185,16 @@ Ex-
   border: 1px solid #ccc;
   padding: 5px 10px;
   font-size: 10px;
-  x-display: block; // disabled
+  x-display: block; /* disabled */
 }
 ```
 
-##### Keep all the style rules in alphabetical order
+##### Keep all the style rules in alphabetical orde
 
 Ex-
 ```
 .alert {
-    background-color: #eee; // temporarily put here
+    background-color: #eee; /* temporarily put here */
   border: 1px solid #ccc;
   display: block;
   font-size: 10px;
@@ -201,7 +209,7 @@ Ex-
 }
 ```
 
-#### Avoid batch styling and use classes instead;
+#### Avoid batch styling and use classes instead
 
 Ex-
 ```
@@ -212,7 +220,7 @@ div#a, dv#b {}
 .ab {}
 ```
 
-##### Always try to write styles in simplified and minified ways as possible
+##### Always try to write styles in __simplified__ and __minified__ ways as possible
 
 Ex-
 ```
@@ -239,12 +247,12 @@ Ex-
 
 #### Naming conventions
 
-##### Use a specific prefix for each of custom css rules to prevent any possible complication may happen with third-party css libraries
+##### Use a specific prefix for each of custom CSS rules to prevent any possible complication may happen with third-party CSS libraries
 
 Ex-
 ```
-.ig-container {}
-.ig-alerts {}
+.kf-container {}
+.kf-alerts {}
 ```
 
 ##### Use lowercase letters in all the style rules
@@ -272,10 +280,9 @@ Ex-
 
 .list {}
 #main-logo {}
-
 ```
 
-##### Always follow the semantic naming for html elements and styles
+##### Always follow the semantic naming for HTML elements and styles
 
 Ex-
 ```
@@ -292,9 +299,7 @@ Ex-
 // Correct:
 <article>
   <h1>Title</h1>
-
   <p>Article contents goes here!</p>
-
   <ul>
     <li>list item</li>
   </ul>
@@ -306,16 +311,16 @@ article > p {}
 article > ul {}
 ```
 
-##### BEM like naming convention for css rules
+##### BEM-like naming convention for CSS rules
 
 Ex-
 ```
-.alerts // block
-.alerts__error // element
-.alerts--show // state
+.alerts {} /* block */
+.alerts__error {} /* element */
+.alerts--show {} /* state */
 ```
 
-This just a draft for a better styleguide implementation can use for scalable web projects.
+This a basic draft for a better styleguide implementation for web projects focus on scalability and maintainability.
 
 ## References
 * [Structuring CSS in large projects](https://medium.com/peergrade-io/structuring-css-in-large-projects-37f1695f5ec8)
@@ -323,7 +328,5 @@ This just a draft for a better styleguide implementation can use for scalable we
 * [High-level advice and guidelines for writing sane, manageable, scalable CSS](http://cssguidelin.es/)
 * [BEM and SMACSS: Advice From Developers Who’ve Been There](https://www.sitepoint.com/bem-smacss-advice-from-developers/)
 * [A Look at Some CSS Methodologies](http://sixrevisions.com/css/css-methodologies/)
-* and more..
 
-@created-at 23rd Feb 2017 | @last-update 24th Feb 2017
 
