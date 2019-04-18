@@ -1,7 +1,5 @@
 # CSS Styleguide Proposal
 
----
-
 ### Objective
 
 * Structuring CSS in large web projects
