@@ -11,7 +11,7 @@
 
 #### Use latest CSS versions and related technologies when possible
 
-In the time I draft this document; the latest CSS version is CSS3 and there are two commonly use CSS preprocessors as LESS and SASS.
+The current CSS version is CSS3 and there are two commonly used CSS preprocessors: `LESS` and `SASS`.
 
 ##### Always `Minify`, `Transpile` the CSS code as needed
 
@@ -19,7 +19,7 @@ Use `Gulp`, `Webpack` or any other task-runner/module bundler to automate the pr
 
 #### File / Directory structure
 
-There is no right or wrong way to structure the CSS files, but keeping them organized in a module-type manner is the best way to manage a large project.
+There is no right or wrong way to structure the CSS files, but keeping them organized in a modular manner is the best way to manage a large project.
 
 Ex-
 ```
