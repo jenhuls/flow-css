@@ -2,7 +2,7 @@
 
 > A proposal for structuring CSS in web projects.
 
-There are bunch of various CSS guidelines, methodologies and blueprints are available on the internet. I did research (briefly) on numbers of leading projects before come down to draft this document.
+There are a bunch of various CSS guidelines, methodologies and blueprints available on the Internet. I did research (briefly) on numbers of leading projects before coming down to draft this document.
 
 Here’s a list of a few of main existing guidelines which I looked into:
 
@@ -13,13 +13,13 @@ Here’s a list of a few of main existing guidelines which I looked into:
 * SUIT CSS
 * Systematic CSS
 
-Before move into the proposing solution, let’s summarize the few of existing guidelines here;
+Before moving into the proposed solution, let’s summarize a few of the existing guidelines here;
 
 ### Object-Oriented CSS (OOCSS)
 
-OOCSS is based Object-oriented thinking pattern as implicates by its’ name.
+OOCSS is based on the Object-oriented thinking pattern.
 
-A best example for uses of OOCSS is [Bootstrap](http://getbootstrap.com/). All the bootstrap style classes has organized in OOCSS manner.
+A best example for uses of OOCSS is [Bootstrap](http://getbootstrap.com/). All the bootstrap style classes are organized in OOCSS manner.
 
 Ex-
 ```
@@ -31,7 +31,7 @@ Ex-
 
 ### BEM - Block, Element, Modifier
 
-BEM is entirely focused on __naming convention__ of CSS classes. It has divided into three type of CSS classes based on the behaviour.
+BEM is entirely focused on __naming convention__ of CSS classes. It is divided into three type of CSS classes based on the behaviour.
 
 * **Block**: .block
 * **Element**: .block__element
@@ -54,7 +54,7 @@ Ex-
 
 ### SMACSS - Scalable and Modular Architecture for CSS
 
-SMACSS is also based on categorization of CSS rules. Unlike BEM; SMACSS classified CSS rules into five categories:
+SMACSS is also based on categorization of CSS rules. Unlike BEM; SMACSS classifies CSS rules into five categories:
 
 * **Base**: Primary html DOM elements, such as `body`, `h1`, `p` `a` ..etc.
 * **Layout**: This may be like `.page-layout`, `.contact-form`, `.alert` ..etc.
@@ -63,9 +63,9 @@ SMACSS is also based on categorization of CSS rules. Unlike BEM; SMACSS classifi
 
 ## Conclusion
 
-The conclusion is; all the above guidelines have both pros and cons and those things are always depends on the use-case and the complexity of the application.
+The conclusion is: all the above guidelines have both pros and cons and those things are always dependent on the use-case and the complexity of the application.
 
-Secondly, in a real-world project, if someone or an organization wants to implements a styleguide such as for web development projects; it can’t be based on a single methodology (above mentioned or any other). In that case, we may need to make an additional set of rules for a better implementation.
+Secondly, in a real-world project, if someone or an organization wants to implement a styleguide for web development projects--it can’t be based on a single methodology (mentioned above or any other). In that case, we may need to make an additional set of rules for better implementation.
 
 ---
 
@@ -74,9 +74,9 @@ Secondly, in a real-world project, if someone or an organization wants to implem
 ### Objective
 
 * Structuring CSS in large web projects
-* Keep codes transparent, sane, and readable
-* Keep styles/stylesheets as maintainable
-* Keep codes as scalable
+* Keep code transparent, sane, and readable
+* Keep styles/stylesheets maintainable
+* Keep code scalable
 
 ### Guidelines
 
@@ -84,13 +84,13 @@ Secondly, in a real-world project, if someone or an organization wants to implem
 
 In the time I draft this document; the latest CSS version is CSS3 and there are two commonly use CSS preprocessors as LESS and SASS.
 
-##### Always `Minify`, `Transpile` the CSS codes as needed
+##### Always `Minify`, `Transpile` the CSS code as needed
 
 Use `Gulp`, `Webpack` or any other task-runner/module bundler to automate the process.
 
 #### File / Directory structure
 
-There are no right or wrong way to structured the CSS files, but keep them organize in module-wise manner is a best way to manage a large project.
+There is no right or wrong way to structure the CSS files, but keeping them organized in a module-type manner is the best way to manage a large project.
 
 Ex-
 ```
@@ -105,7 +105,7 @@ css/
   final.css
 ```
 
-Here, we keep all the third-party CSS libraries (if any) in `vendor/` directory, and `SASS` files in `sass/` directory as divided into separate modules. Finally, the transpiled-minified version of all, keeps as in `final.css`.
+Here, we keep all the third-party CSS libraries (if any) in `vendor/` directory, and `SASS` files in `sass/` directory divided into separate modules. Finally, the transpiled-minified version of all, outputs to `final.css`.
 
 #### Code styles
 
@@ -156,13 +156,13 @@ Ex-
 .alert__error { color: red; }
 ```
 
-##### Avoid uses of `!important` as possible
+##### Avoid uses of `!important` when possible
 
-The one of the best practices of CSS in a larger codebase is avoid uses of `!imporatnt` as possible.
+One of the best practices of CSS in a larger codebase is avoid uses of `!imporatnt` when possible.
 
 ##### Adding test/temporary styles
 
-Put an additional tab indent for a test/temporarily added styles.
+Put an additional tab indent for a test/temporarily added style(s).
 
 Ex-
 ```
@@ -177,7 +177,7 @@ Ex-
 
 ##### Disabling style rules
 
-Add `x-` prefix for disable style rule without removing entirely. 
+Add `x-` prefix to disable a style rule without removing it entirely. 
 
 Ex-
 ```
@@ -189,7 +189,7 @@ Ex-
 }
 ```
 
-##### Keep all the style rules in alphabetical orde
+##### Keep all the style rules in alphabetical order
 
 Ex-
 ```
@@ -247,7 +247,7 @@ Ex-
 
 #### Naming conventions
 
-##### Use a specific prefix for each of custom CSS rules to prevent any possible complication may happen with third-party CSS libraries
+##### Use a specific prefix for each of the custom CSS rules to prevent any possible complication that may happen with third-party CSS libraries
 
 Ex-
 ```
@@ -320,7 +320,7 @@ Ex-
 .alerts--show {} /* state */
 ```
 
-This a basic draft for a better styleguide implementation for web projects focus on scalability and maintainability.
+This a basic draft for a better styleguide implementation for web projects focusing on scalability and maintainability.
 
 ## References
 * [Structuring CSS in large projects](https://medium.com/peergrade-io/structuring-css-in-large-projects-37f1695f5ec8)
