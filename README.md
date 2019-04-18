@@ -2,7 +2,7 @@
 
 > A proposal for structuring CSS in web projects.
 
-There are a bunch of various CSS guidelines, methodologies and blueprints available on the Internet. I did research (briefly) on numbers of leading projects before coming down to draft this document.
+There are a bunch of various CSS guidelines, methodologies and blueprints available on the Internet. I did research (briefly) on a number of leading projects before drafting this document.
 
 Here’s a list of a few of main existing guidelines which I looked into:
 
